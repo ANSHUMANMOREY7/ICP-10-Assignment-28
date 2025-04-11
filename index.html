@@ -9,13 +9,28 @@
         padding: 0;
         margin: 0;
        }
+       .alignment{
+  
+        margin: 5px;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 5px;
+       }
+       .input-box{
+         
+       }
+  
         .footer{
             position: fixed;
             bottom: 0px;
             width: 100%;
             background-color: black;
             height: 150px;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+             
         }
     </style>
 </head>
@@ -23,15 +38,15 @@
     <div class="container">
         <h1 class="head">to do list</h1>
         <div class="footer">
-        <input type="text" class="input-box">
+        <input type="text"  class="alignment input-box">
 
-            <select  name="" id="" >
-                <option value="high"> high</option>
+            <select  class=" alignment priority" name="" id="" >
+                <option value="high" > high</option>
                 <option value="medium">medium</option>
                 <option value="low">low</option>
                 
             </select>
-            <button class="btn-addtask">add task</button>
+            <button class="btn-addtask alignment">add task</button>
         </div>
     </div>
 </body>
