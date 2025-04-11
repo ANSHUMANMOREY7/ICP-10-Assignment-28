@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to do list</title>
     <style>
-       *{
-        padding: 0;
-        margin: 0;
-       }
-       .head{
-        text-align: center;
-        font-size: 50px;
-        padding: 10px;
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
-       }
-       .alignment{
-  
-        margin: 5px;
-        padding: 10px;
-        border: 2px solid black;
-        border-radius: 5px;
-       }
-       .input-box{
-         font-size: 15px;
-       }
-  
-        .footer{
+        .head {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px ; 
+
+        }
+
+        .footer {
             position: fixed;
             bottom: 0px;
             width: 100%;
@@ -36,24 +28,42 @@
             justify-content: center;
             align-items: center;
             padding: 10px;
-             
+
+        }
+
+        .alignment {
+
+            margin: 5px;
+            padding: 10px 25px;
+            border: 2px solid black;
+            border-radius: 5px ;
+        }
+
+        .input-box {
+            font-size: 15px;
+        }
+        .btn-addtask{
+            background-color: rgb(228, 162, 41);
+            
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1 class="head">To Do List</h1>
         <div class="footer">
-        <input type="text"  class="alignment input-box">
+            <input type="text" class="alignment input-box">
 
-            <select  class=" alignment priority" name="" id="" >
-                <option value="high" > high</option>
+            <select class=" alignment priority" name="" id="">
+                <option value="high"> high</option>
                 <option value="medium">medium</option>
                 <option value="low">low</option>
-                
+
             </select>
             <button class="btn-addtask alignment">add task</button>
         </div>
     </div>
 </body>
+
 </html>
