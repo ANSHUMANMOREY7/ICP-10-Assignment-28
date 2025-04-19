@@ -46,12 +46,20 @@
             background-color: rgb(228, 162, 41);
             
         }
-    </style>
+        .to-do-list{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+        }
+    </style> 
 </head>
 
 <body>
     <div class="container">
         <h1 class="head">To Do List</h1>
+        <div class="to-do-list" id="to-do-list">
+
+        </div>
         <div class="footer">
             <input type="text" class="alignment input-box" id="input-box">
 
@@ -66,21 +74,48 @@
     </div>
     <script>
      
-     let list=[] ;
+      let list =[] ;
 
      function addtask()
      {
        const elementInput=document.getElementById('input-box')
        const elementPriority=document.getElementById('priority')
        
-       let tasklist={
+       let tasklist ={
        task : elementInput.value,
        priority: elementPriority.value
        }
        list.push(tasklist);
-       console.log(list)
        
+       localStorage.setItem("tasks" , JSON.stringify(list))
+       
+       
+    }
+     
+       const saveditem= localStorage.getItem( "tasks");
+       
+        if(saveditem){
+            list=JSON.parse(saveditem)
+        }
+
+     function renderList(tasklists) 
+     {
+        const listElement=document.getElementById("to-do-list");
+        for (let i= 0; i<tasklists.length; i++) {
+            const taskObj= tasklists[i];
+            
+            listElement.innerHTML  += `
+            <div class="to-do-list">
+            <h3 class="to-do-task"> ${taskObj.task}</h3>
+            <span class="to-do-priority"> ${taskObj.priority}</span>
+         </div>   
+            
+         `;
+            
+        }
      }
+       renderList(list);
+
 
     </script>
 </body>
