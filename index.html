@@ -11,11 +11,23 @@
             margin: 0;
         }
 
-        .head {
-            text-align: center;
-            font-size: 50px;
-            padding: 10px ; 
+        .nav{
 
+            height: 110px;
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            top: 0px;
+            
+        }
+        .head {
+           
+            height: 100px;
+            color:  rgb(228, 162, 41);
+            font-size: 70px;
+            padding: 10px ; 
+           
         }
 
         .footer {
@@ -23,7 +35,7 @@
             bottom: 0px;
             width: 100%;
             background-color: black;
-            height: 150px;
+            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -56,8 +68,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="nav">
         <h1 class="head">To Do List</h1>
+    </div>
+
+    <div class="container">
         <div  id="to-do-list">
 
         </div>
