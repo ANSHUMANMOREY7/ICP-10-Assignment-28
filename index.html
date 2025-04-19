@@ -88,7 +88,7 @@
        list.push(tasklist);
        
        localStorage.setItem("tasks" , JSON.stringify(list))
-       
+       renderList(list);
        
     }
      
@@ -101,6 +101,7 @@
      function renderList(tasklists) 
      {
         const listElement=document.getElementById("to-do-list");
+        listElement.innerHTML = "" ;
         for (let i= 0; i<tasklists.length; i++) {
             const taskObj= tasklists[i];
             
